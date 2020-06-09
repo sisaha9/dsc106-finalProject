@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Shubham Kaushal">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/timeline.js"></script>
+        <title>
+            DSC 106 - Trial
+        </title>
+    </head>
+
+    <body>
+
+        <!-- Names -->
+        <div id = 'name-wrapper'>
+            <p id = 'SK'
+            data-0 = "left: 0px; opacity: 1"
+            data-500 = "left: -250px; opacity: 0">Shubham Kaushal</p>
+            <p id = 'SS'
+            data-0 = "left: 0px; opacity: 1"
+            data-500 = "left: 250px; opacity: 0">Siddharth Saha</p>
+        </div>
+
+        <!-- Marvel Logo -->
+        <div id = "perspective">
+            <figure id = 'logo' 
+            data-0 = "transform: rotatex(-90deg)"
+            data-500="transform: rotatex(0deg)"
+            data-650 = ""
+            data-900="transform: rotatex(90deg)">
+
+                <img src = 'Images/Marvel Logo.jpg' id = 'marvlogo' height="250px" width="auto">
+
+            </figure>
+        </div>
+
+        <!-- Timeline Chart -->
+        <figure id = 'timeline' 
+        data-1000="opacity: 0;" data-1350="opacity: 1;"></figure>
+
+        <script type="text/javascript" src="skrollr-master/dist/skrollr.min.js"></script>
+        <script type="text/javascript">
+            var s = skrollr.init();
+        </script>
+        <script src = 'code.js'></script>
+        
+    </body>
+</html>
