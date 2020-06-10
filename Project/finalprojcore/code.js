@@ -12,15 +12,23 @@ function setup() {
 }
 
 function drawStackedBars() {
-    Highcharts.chart('viz0', {
+    Highcharts.chart('viz1', {
 		chart: {
-			plotBackgroundColor: null,
+			backgroundColor: 'black',
+            style: {
+                // fontFamily: 'monospace',
+                color: "white"
+            },
 			plotBorderWidth: null,
 			plotShadow: false,
 			type: 'bar'
 		},
 		title: {
-			text: '<b>MCU Favorite Heroes In Different Sources</b>'
+			text: '<b>MCU Favorite Heroes In Different Sources</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "white"
+            },
         },
         subtitle: {
             text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>, <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>, <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
@@ -31,23 +39,47 @@ function drawStackedBars() {
 		plotOptions: {
             bar: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    color: "white"
                 }
+            }
+        },
+        legend: {
+            itemStyle: {
+            color: "white"
             }
         },
         xAxis: {
             categories: ['Iron Man', 'Thor', 'Spider Man', 'Doctor Strange', 'Captain America'],
             title: {
-                text: 'Heroes'
+                text: 'Heroes',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
+            },
+            labels: {
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
             }
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Popularity (%)'
+                text: 'Popularity (%)',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
             },
             labels: {
-                overflow: 'justify'
+                overflow: 'justify',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
             }
         },
 		series: [{
@@ -64,162 +96,65 @@ function drawStackedBars() {
             data: [25, 24, 22, 18, 14]
         }]
     });
-    Highcharts.chart('viz1', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'bar'
-		},
-		title: {
-			text: '<b>MCU Favorite Heroes</b>'
-        },
-        subtitle: {
-            text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>'
-        },
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
-		},
-		plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        xAxis: {
-            categories: ['Iron Man', 'Thor', 'Spider Man', 'Doctor Strange', 'Captain America'],
-            title: {
-                text: 'Heroes'
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Popularity (%)'
-            },
-            labels: {
-                overflow: 'justify'
-            }
-        },
-		series: [{
-			name: 'Popularity',
-			data: [59.8, 55.4, 51.1, 46.7, 45.7]
-		}]
-    });
-    Highcharts.chart('viz2', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'bar'
-		},
-		title: {
-			text: '<b>MCU Favorite Heroes</b>'
-        },
-        subtitle: {
-            text: 'Source: <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>'
-        },
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
-		},
-		plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        xAxis: {
-            categories: ['Iron Man', 'Captain America', 'Thor', 'Spider Man', 'Doctor Strange'],
-            title: {
-                text: 'Heroes'
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Popularity (%)'
-            },
-            labels: {
-                overflow: 'justify'
-            }
-        },
-		series: [{
-			name: 'Popularity',
-			data: [53, 53, 50, 39, 30]
-		}]
-    });
-    Highcharts.chart('viz3', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'bar'
-		},
-		title: {
-			text: '<b>MCU Favorite Heroes</b>'
-        },
-        subtitle: {
-            text: 'Source: <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
-        },
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
-		},
-		plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        xAxis: {
-            categories: ['Iron Man', 'Thor', 'Spider Man', 'Captain America', 'Hulk'],
-            title: {
-                text: 'Heroes'
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Popularity (%)'
-            },
-            labels: {
-                overflow: 'justify'
-            }
-        },
-		series: [{
-			name: 'Popularity',
-			data: [25, 24, 22, 18, 14]
-		}]
-	});
 }
 
 function drawLine() {
-    Highcharts.chart('viz4', {
-
+    Highcharts.chart('viz2', {
+        chart: {
+			backgroundColor: '#807d75'
+		},
 		title: {
-			text: '<b>Sales by Phase</b>'
+			text: '<b>Sales by Phase</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "black"
+            }
 		},
         subtitle: {
-            text: 'Source: <a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">The Numbers</a>'
+            text: 'Source: <a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">The Numbers</a>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "#4d4b46"
+            }
         },
 		yAxis: {
 			title: {
-				text: '<b>Sales generated</b>'
+				text: '<b>Sales generated</b>',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "black"
+                }
             },
             labels: {
                 formatter: function () {
                     return '$' + this.value/1000000000 + 'B';
+                },
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "black"
                 }
             }
-		},
+        },
+        
+        gridLineColor: 'white',
+        gridLineWidth: .25,
+
 		xAxis: {
 			title: {
-				text: '<b>Phase</b>'
+				text: '<b>Phase</b>',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "black"
+                }
 			},
-			categories: ['Phase 1', 'Phase 2', 'Phase 3']
-		},
+			categories: ['Phase 1', 'Phase 2', 'Phase 3'],
+            labels: {style: {
+                // fontFamily: 'monospace',
+                color: "black"
+            }
+
+        }
+    },
 	
 		legend: {
 			layout: 'vertical',
@@ -241,11 +176,11 @@ function drawLine() {
 			data: [2721428147, 2611491474, 6879611017]
 		}, {
 			name: 'Captain America',
-            color: '#b97d10',
+            color: '#e39302', /*'#b97d10',*/
             data: [1885669987, 2110501091, 5999444667]
 		}, {
             name: 'Thor',
-            colors: '#67C7EB',
+            colors: '#0fbcfc', /*'#67C7EB',*/
             data: [1964426829, 2040701718, 5700118607]
         }],
 	
@@ -268,7 +203,7 @@ function drawLine() {
 }
 
 function drawScreenBars() {
-    Highcharts.chart('viz5', {
+    Highcharts.chart('viz3', {
 		chart: {
 			plotBackgroundColor: null,
 			plotBorderWidth: null,
@@ -323,15 +258,19 @@ function drawScreenBars() {
 }
 
 function drawLinesBars() {
-    Highcharts.chart('viz6', {
+    Highcharts.chart('viz4', {
 		chart: {
-			plotBackgroundColor: null,
+			backgroundColor: 'black',
 			plotBorderWidth: null,
 			plotShadow: false,
 			type: 'column'
 		},
 		title: {
-			text: '<b>MCU Lines per character</b>'
+			text: '<b>MCU Lines per character</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "green"
+            }
         },
         subtitle: {
             text: 'Source: <a href="https://transcripts.fandom.com/wiki/Category:Marvel_Transcripts">Fandom</a>'
@@ -342,7 +281,8 @@ function drawLinesBars() {
 		plotOptions: {
             column: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    color: 'white'
                 },
                 colorByPoint: true
             },
@@ -355,16 +295,34 @@ function drawLinesBars() {
         xAxis: {
             categories: ['Iron Man', 'Captain America', 'Thor'],
             title: {
-                text: 'Heroes'
+                text: 'Heroes',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                },
+                labels: {
+                    style: {
+                        // fontFamily: 'monospace',
+                        color: "green"
+                    }
+                }
             }
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Number of lines'
+                text: 'Number of lines',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                }
             },
             labels: {
-                overflow: 'justify'
+                overflow: 'justify',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                }
             }
         },
 		series: [{
@@ -391,7 +349,7 @@ function drawNetworkGraph() {
     let ironMan = "#E8544E",
     others = "#FFD265";
 
-    Highcharts.chart('viz7', {
+    Highcharts.chart('viz5', {
 
         chart: {
             type: 'networkgraph',
