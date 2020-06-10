@@ -14,6 +14,13 @@
     </head>
 
     <body>
+        <div class = 'scene' id = 'scene-intro'
+        data-900="opacity: 1"
+        ></div>
+
+        <div class = 'scene' id = 'scene-timeline'
+        data-900="opacity: 0"
+        data-1150="opacity: 1"></div>
 
         <!-- Names -->
         <div id = 'name-wrapper'>
@@ -28,19 +35,20 @@
         <!-- Marvel Logo -->
         <div id = "perspective">
             <figure id = 'logo' 
-            data-0 = "transform: rotatex(-90deg)"
-            data-500="transform: rotatex(0deg)"
+            data-0 = "transform: rotatex(-90deg); opacity: 1"
+            data-500="transform: rotatex(0deg); opacity: 1"
             data-650 = ""
-            data-900="transform: rotatex(90deg)">
+            data-900="opacity: 0">
 
                 <img src = 'Images/Marvel Logo.jpg' id = 'marvlogo' height="250px" width="auto">
 
             </figure>
         </div>
 
+
         <!-- Timeline Chart -->
         <figure id = 'timeline' 
-        data-1000="opacity: 0;" data-1350="opacity: 1;"></figure>
+        data-1100="opacity: 0;" data-1350="opacity: 1;"></figure>
 
         <script type="text/javascript" src="skrollr-master/dist/skrollr.min.js"></script>
         <script type="text/javascript">

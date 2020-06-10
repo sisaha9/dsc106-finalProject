@@ -33,7 +33,7 @@ Highcharts.chart('timeline', {
          }
     },
     subtitle: {
-        text: 'Info source: <a href="https://en.wikipedia.org/wiki/Timeline_of_space_exploration">www.wikipedia.org</a>'
+        text: 'Info source: <a href="https://en.wikipedia.org/wiki/List_of_Marvel_Cinematic_Universe_films">www.wikipedia.org</a>'
     },
     tooltip: {
         style: {
@@ -56,7 +56,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2008, 5, 2),
             name: 'Iron Man',
             label: 'Iron Man',
-            description: "Hi"
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2008, 6, 13),
             name: 'The Incredible Hulk',
@@ -66,7 +69,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2010, 5, 7),
             name: 'Iron Man 2',
             label: 'Iron Man 2',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2011, 5, 6),
             name: 'Thor',
@@ -86,7 +92,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2013, 5, 3),
             name: 'Iron Man 3',
             label: 'Iron Man 3',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2013, 11, 8),
             name: 'Thor: The Dark World',
@@ -106,7 +115,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2015, 5, 1),
             name: 'Avengers: Age of Ultron',
             label: 'Avengers: Age of Ultron',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2015, 7, 17),
             name: 'Ant-Man',
@@ -116,7 +128,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2016, 5, 6),
             name: 'Captain America: Civil War',
             label: 'Captain America: Civil War',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2016, 11, 4),
             name: 'Doctor Strange',
@@ -131,7 +146,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2017, 7, 7),
             name: 'Spider-Man: Homecoming',
             label: 'Spider-Man: Homecoming',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2017, 11, 3),
             name: 'Thor: Ragnarok',
@@ -146,7 +164,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2018, 4, 27),
             name: 'Avengers: Infinity War',
             label: 'Avengers: Infinity War',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2018, 7, 6),
             name: 'Ant-Man and the Wasp',
@@ -161,7 +182,10 @@ Highcharts.chart('timeline', {
             x: Date.UTC(2019, 4, 26),
             name: 'Avengers: Endgame',
             label: 'Avengers: Endgame',
-            description: ""
+            description: "",
+            dataLabels: {
+                backgroundColor: '#f0c63a'
+            }
         }, {
             x: Date.UTC(2019, 7, 2),
             name: 'Spider-Man: FFH',
