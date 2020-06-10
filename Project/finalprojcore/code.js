@@ -11,58 +11,6 @@ function setup() {
 }
 
 function drawStackedBars() {
-    Highcharts.chart('viz1', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'bar'
-		},
-		title: {
-			text: '<b>MCU Favorite Heroes In Different Sources</b>'
-        },
-        subtitle: {
-            text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>, <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>, <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
-        },
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
-		},
-		plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        xAxis: {
-            categories: ['Iron Man', 'Thor', 'Spider Man', 'Doctor Strange', 'Captain America'],
-            title: {
-                text: 'Heroes'
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Popularity (%)'
-            },
-            labels: {
-                overflow: 'justify'
-            }
-        },
-		series: [{
-            name: 'Reddit',
-            color: '#fbca03',
-			data: [59.8, 55.4, 51.1, 46.7, 45.7]
-		}, {
-            name: 'Rotten Tomatoes',
-            color: '#b97d10',
-            data: [53, 53, 50, 39, 30]
-        }, {
-            name: 'Express',
-            color: '#67C7EB',
-            data: [25, 24, 22, 18, 14]
-        }]
-    });
     // Highcharts.chart('viz1', {
 	// 	chart: {
 	// 		plotBackgroundColor: null,
@@ -71,10 +19,10 @@ function drawStackedBars() {
 	// 		type: 'bar'
 	// 	},
 	// 	title: {
-	// 		text: '<b>MCU Favorite Heroes</b>'
+	// 		text: '<b>MCU Favorite Heroes In Different Sources</b>'
     //     },
     //     subtitle: {
-    //         text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>'
+    //         text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>, <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>, <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
     //     },
 	// 	tooltip: {
 	// 		pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
@@ -102,96 +50,182 @@ function drawStackedBars() {
     //         }
     //     },
 	// 	series: [{
-	// 		name: 'Popularity',
+    //         name: 'Reddit',
+    //         color: '#fbca03',
 	// 		data: [59.8, 55.4, 51.1, 46.7, 45.7]
-	// 	}]
+	// 	}, {
+    //         name: 'Rotten Tomatoes',
+    //         color: '#b97d10',
+    //         data: [53, 53, 50, 39, 30]
+    //     }, {
+    //         name: 'Express',
+    //         color: '#67C7EB',
+    //         data: [25, 24, 22, 18, 14]
+    //     }]
     // });
-    // Highcharts.chart('viz2', {
-	// 	chart: {
-	// 		plotBackgroundColor: null,
-	// 		plotBorderWidth: null,
-	// 		plotShadow: false,
-	// 		type: 'bar'
-	// 	},
-	// 	title: {
-	// 		text: '<b>MCU Favorite Heroes</b>'
-    //     },
-    //     subtitle: {
-    //         text: 'Source: <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>'
-    //     },
-	// 	tooltip: {
-	// 		pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
-	// 	},
-	// 	plotOptions: {
-    //         bar: {
-    //             dataLabels: {
-    //                 enabled: true
-    //             }
-    //         }
-    //     },
-    //     xAxis: {
-    //         categories: ['Iron Man', 'Captain America', 'Thor', 'Spider Man', 'Doctor Strange'],
-    //         title: {
-    //             text: 'Heroes'
-    //         }
-    //     },
-    //     yAxis: {
-    //         min: 0,
-    //         title: {
-    //             text: 'Popularity (%)'
-    //         },
-    //         labels: {
-    //             overflow: 'justify'
-    //         }
-    //     },
-	// 	series: [{
-	// 		name: 'Popularity',
-	// 		data: [53, 53, 50, 39, 30]
-	// 	}]
-    // });
-    // Highcharts.chart('viz3', {
-	// 	chart: {
-	// 		plotBackgroundColor: null,
-	// 		plotBorderWidth: null,
-	// 		plotShadow: false,
-	// 		type: 'bar'
-	// 	},
-	// 	title: {
-	// 		text: '<b>MCU Favorite Heroes</b>'
-    //     },
-    //     subtitle: {
-    //         text: 'Source: <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
-    //     },
-	// 	tooltip: {
-	// 		pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
-	// 	},
-	// 	plotOptions: {
-    //         bar: {
-    //             dataLabels: {
-    //                 enabled: true
-    //             }
-    //         }
-    //     },
-    //     xAxis: {
-    //         categories: ['Iron Man', 'Thor', 'Spider Man', 'Captain America', 'Hulk'],
-    //         title: {
-    //             text: 'Heroes'
-    //         }
-    //     },
-    //     yAxis: {
-    //         min: 0,
-    //         title: {
-    //             text: 'Popularity (%)'
-    //         },
-    //         labels: {
-    //             overflow: 'justify'
-    //         }
-    //     },
-	// 	series: [{
-	// 		name: 'Popularity',
-	// 		data: [25, 24, 22, 18, 14]
-	// 	}]
-	// });
+    Highcharts.chart('viz1', {
+		chart: {
+            backgroundColor: '#6f3c89',
+            style: {
+                // fontFamily: 'monospace',
+                color: "white"
+            },
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'bar'
+		},
+		title: {
+            text: '<b>MCU Favorite Heroes</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "white"
+            },
+        },
+        subtitle: {
+            text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>'
+        },
+		tooltip: {
+            pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'            
+		},
+		plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true,
+                    color: "white"
+                                    
+                }
+                
+            }
+        },
+        legend: {
+            itemStyle: {
+            color: "white"
+            }
+        },
+        xAxis: {
+            categories: ['Iron Man', 'Thor', 'Spider Man', 'Doctor Strange', 'Captain America'],
+            title: {
+                text: 'Heroes',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
+            },
+            labels: {
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Popularity (%)',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                },
+            },
+            labels: {
+                overflow: 'justify',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
+            }
+        },
+		series: [{
+			name: 'Popularity',
+            data: [59.8, 55.4, 51.1, 46.7, 45.7],
+		}]
+    });
+    Highcharts.chart('viz2', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'bar'
+		},
+		title: {
+			text: '<b>MCU Favorite Heroes</b>'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>'
+        },
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
+		},
+		plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        xAxis: {
+            categories: ['Iron Man', 'Captain America', 'Thor', 'Spider Man', 'Doctor Strange'],
+            title: {
+                text: 'Heroes'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Popularity (%)'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+		series: [{
+			name: 'Popularity',
+			data: [53, 53, 50, 39, 30]
+		}]
+    });
+    Highcharts.chart('viz3', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'bar'
+		},
+		title: {
+			text: '<b>MCU Favorite Heroes</b>'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
+        },
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
+		},
+		plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        xAxis: {
+            categories: ['Iron Man', 'Thor', 'Spider Man', 'Captain America', 'Hulk'],
+            title: {
+                text: 'Heroes'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Popularity (%)'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+		series: [{
+			name: 'Popularity',
+			data: [25, 24, 22, 18, 14]
+		}]
+	});
 }
 
 function drawLine() {
@@ -269,7 +303,7 @@ function drawLine() {
 function drawScreenBars() {
     Highcharts.chart('viz3', {
 		chart: {
-			plotBackgroundColor: null,
+			// backgroundColor: ,
 			plotBorderWidth: null,
 			plotShadow: false,
 			type: 'column'

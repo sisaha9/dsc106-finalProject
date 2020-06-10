@@ -8,12 +8,14 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/timeline.js"></script>
+        <script src="finalprojcore/code.js"></script>
         <title>
             DSC 106 - Trial
         </title>
     </head>
 
-    <body>
+    <body onload="setup()">
+        
         <div class = 'scene' id = 'scene-intro'
         data-900="opacity: 1"
         ></div>
@@ -21,6 +23,19 @@
         <div class = 'scene' id = 'scene-timeline'
         data-900="opacity: 0"
         data-1150="opacity: 1"></div>
+
+        <div class = 'scene' id = 'scene-viz1'
+        data-1850="opacity: 0"
+        data-2000="opacity: 1"></div>
+
+        <div class = 'scene' id = 'scene-viz3'
+        data-3400="opacity: 0"
+        data-3600="opacity: 1"></div>
+
+        <!-- <div class = 'scene' id = 'scene-im'
+        data-2300="opacity:0"
+        data-2400="opacity: 1">
+        <img src="Images/Iron Man Wallpaper.jpg" alt="" height= "655px" width="1450px"></div> -->
 
         <!-- Names -->
         <div id = 'name-wrapper'>
@@ -45,16 +60,103 @@
             </figure>
         </div>
 
+        <div id="Timeline Transition">
+
+        </div>
+
 
         <!-- Timeline Chart -->
         <figure id = 'timeline' 
-        data-1100="opacity: 0;" data-1350="opacity: 1;"></figure>
+        data-1100="opacity: 0;" data-1350="opacity: 1;" data-1500="opacity: 1; transform: rotatey(0deg)" 
+        data-1700="opacity: 0; transform: rotatey(90deg)"></figure>
+
+        <!-- Arc Reactor Loading -->
+        <figure id = 'arc'
+        data-1690="opacity: 0;" data-1750="opacity:1;" data-1900="opacity:0">
+            <img src = "Images/Arc Reactor.jpg" id = 'arcreactor' height="250px" width="auto"
+            data-1700="opacity:1; transform: rotate(0deg) scale(1.5)" 
+            data-1900="transform: rotate(1800deg) scale(0)">
+        </figure>
+
+        <figure id = 'viz1'
+        data-2000="opacity: 0; transform:rotate(90deg)" data-2100="opacity: 1; transform:rotate(0deg)"
+        data-2200 = "left: 75px; transform:rotate(0deg)" 
+        data-2400 = "left: -1000px; transform:rotate(-90deg)"></figure>
+
+
+        <!-- <figure id = 'scene-im'
+        data-2300="opacity: 0; top: 0px; left: 0px"
+        data-2400="opacity: 1; top: 0px; left: 0px"
+        data-2500="opacity: 1; top: 0px; left: 2000px">
+        <img src="Images/Iron Man Wallpaper.jpg" alt="" height= "655px" width="1450px"></figure>  -->
+
+        <figure id = 'viz2'
+        data-2300= "opacity: 0; top: 640px"
+        data-2400= "opacity: 1; top: 640px; transform: rotate(0deg)" 
+        data-2500= "top: 100px; transform: rotate(-20deg)"
+        data-2600= "top: 100px; transform: rotate(20deg)"
+        data-2700= "top: 200px; transform: rotate(0deg)"
+        data-2800= "top: 100px;"
+        data-3200 = "left: 75px; transform: rotate(0deg)"
+        data-3400 = "left: 1100px; top: -700px; transform: rotate(-90deg)"></figure>
+        
+        <!-- Theatre Background -->
+        <figure id = 'scene-im'
+        data-3500="opacity: 0; top: 0px; left: 0px"
+        data-3600="opacity: 1; top: 0px; left: 0px"
+        data-4200="filter: brightness(1); top: 0px; left: 0px"
+        data-4400="filter: brightness(.25); top: 0px; left: 0px"
+        data-4600="filter: brightness(0); top: 0px; left: 0px"
+        >
+        <img src="Images/Theatre.jpg" alt="" height= "665px" width="1450px"></figure>
+
+        <!-- Screen Time Viz -->
+        <figure id = 'viz3'
+        data-3700="opacity: 0; top: 90px; left: 210px"
+        data-3900="opacity: 1"
+        data-4200="opacity: 1"
+        data-4400="opacity: 0"></figure>
+
+        <!-- Iron Man Theatre Sticker -->
+        <figure class = 'sticker'>
+            <img src="Images/Iron Man Sticker.jpg" alt="Iron Man Sticker" height="50px" width="auto"
+            data-3700="opacity: 0; top: -0px; left: 425px" 
+            data-3900="opacity: 1; top: 120px; left: 425px"
+            data-4200="opacity: 1; top: 120px; left: 425px"
+            data-4400="opacity: 0; top: 1000px; left: 425px"
+            >
+        </figure>
+
+        <!-- Captain America Theatre Sticker -->
+        <figure class = 'sticker'>
+            <img src="Images/Captain America Sticker.jpg" alt="Cap Sticker" height="50px" width="auto"
+            data-3700="opacity: 0; top: 700px; left: 70px" 
+            data-3800="opacity: 0.5; top: 350px; left: 1400px"
+            data-3900="opacity: 1; top: 170px; left: 700px"
+            data-4200="opacity: 1; top: 170px; left: 700px"
+            data-4300="opacity: .5; top: 0px; left: 250px"
+            data-4400="opacity: .5; top: 25px; left: -50px"
+            >
+        </figure>
+
+        <!-- Thor Theatre Sticker -->
+        <figure class = 'sticker'>
+            <img src="Images/Mjolnir Sticker.jpg" alt="Thor Sticker" height="50px" width="auto"
+            data-3700="opacity: 0; top: 190px; left: 0px" 
+            data-3900="opacity: 1; top: 190px; left: 985px"
+            data-4200="opacity: 1; top: 190px; left: 985px"
+            data-4400="opacity: 1; top: 190px; left: 1500px"
+            >
+        </figure>
+
+        <!-- TODO -->
+        <div id = 'viz4'></div>
 
         <script type="text/javascript" src="skrollr-master/dist/skrollr.min.js"></script>
         <script type="text/javascript">
             var s = skrollr.init();
         </script>
-        <script src = 'code.js'></script>
+        <script src = 'code1.js'></script>
         
     </body>
 </html>

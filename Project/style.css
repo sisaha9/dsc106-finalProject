@@ -26,11 +26,19 @@ body{
 }
 
 #scene-intro {
-    background-color: black;
+    background-color: #4a0505;
 }
 
 #scene-timeline {
-    background-color: #4a0505;
+    background-color: black;
+}
+
+#scene-viz1 {
+    background-color: #6f3c89;
+}
+
+#scene-viz3 {
+    background-color: white;
 }
 
 /* #name-wrapper {
@@ -69,4 +77,28 @@ body{
     padding-top: 150px;
     padding-left: 400px;
 }
- 
+
+#arc {
+    padding-top: 40px;
+    padding-left: 450px;
+}
+
+#viz1, #viz2 {
+    width: 75%;
+}
+
+#viz3 {
+    height: 45%;
+    width: 65%;
+}
+
+/* #im-sticker {
+    padding-left: 1000px;
+    padding-top: 25px;  
+} */
+
+#scene-im {
+    margin-left: 0px;
+    margin-top: -10px;
+}
+
