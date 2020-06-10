@@ -65,7 +65,7 @@ function drawStackedBars() {
     // });
     Highcharts.chart('viz1', {
 		chart: {
-            backgroundColor: '#6f3c89',
+            backgroundColor: 'black',
             style: {
                 // fontFamily: 'monospace',
                 color: "white"
@@ -230,29 +230,58 @@ function drawStackedBars() {
 
 function drawLine() {
     Highcharts.chart('viz2', {
-
-		title: {
-			text: '<b>Sales by Phase</b>'
+        chart: {
+			backgroundColor: '#807d75'
 		},
-        subtitle: {
-            text: 'Source: <a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">The Numbers</a>'
+		title: {
+			text: '<b>Sales by Phase</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "black"
+            }
         },
+        subtitle: {
+            text: 'Source: <a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">The Numbers</a>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "#4d4b46"
+            }
+        },        
 		yAxis: {
 			title: {
-				text: '<b>Sales generated</b>'
+				text: '<b>Sales generated</b>',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "black"
+                }
             },
             labels: {
                 formatter: function () {
                     return '$' + this.value/1000000000 + 'B';
+                },
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "black"
                 }
-            }
+            },
+            gridLineColor: 'white',
+            gridLineWidth: .25
 		},
 		xAxis: {
 			title: {
-				text: '<b>Phase</b>'
+				text: '<b>Phase</b>',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "black"
+                }
 			},
-			categories: ['Phase 1', 'Phase 2', 'Phase 3']
-		},
+			categories: ['Phase 1', 'Phase 2', 'Phase 3'],
+            labels: {style: {
+                // fontFamily: 'monospace',
+                color: "black"
+            }
+        }
+    },
 	
 		legend: {
 			layout: 'vertical',
@@ -274,11 +303,11 @@ function drawLine() {
 			data: [2721428147, 2611491474, 6879611017]
 		}, {
 			name: 'Captain America',
-            color: '#b97d10',
+            color: '#e39302', /*'#b97d10',*/
             data: [1885669987, 2110501091, 5999444667]
 		}, {
             name: 'Thor',
-            colors: '#67C7EB',
+            colors: '#0fbcfc', /*'#67C7EB',*/
             data: [1964426829, 2040701718, 5700118607]
         }],
 	
@@ -358,13 +387,17 @@ function drawScreenBars() {
 function drawLinesBars() {
     Highcharts.chart('viz4', {
 		chart: {
-			plotBackgroundColor: null,
+			backgroundColor: 'black',
 			plotBorderWidth: null,
 			plotShadow: false,
 			type: 'column'
 		},
 		title: {
-			text: '<b>MCU Lines per character</b>'
+			text: '<b>MCU Lines per character</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "green"
+            }
         },
         subtitle: {
             text: 'Source: <a href="https://transcripts.fandom.com/wiki/Category:Marvel_Transcripts">Fandom</a>'
@@ -375,7 +408,8 @@ function drawLinesBars() {
 		plotOptions: {
             column: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    color: 'white'
                 },
                 colorByPoint: true
             },
@@ -388,16 +422,34 @@ function drawLinesBars() {
         xAxis: {
             categories: ['Iron Man', 'Captain America', 'Thor'],
             title: {
-                text: 'Heroes'
+                text: 'Heroes',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                }
+            },
+            labels: {
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                }
             }
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Number of lines'
+                text: 'Number of lines',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                }
             },
             labels: {
-                overflow: 'justify'
+                overflow: 'justify',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "green"
+                }
             }
         },
 		series: [{
@@ -405,7 +457,7 @@ function drawLinesBars() {
             data: [1931, 927, 866]
         }],
         legend: {
-            enabled: false
+            enabled: false            
         }
     });
 }

@@ -28,9 +28,17 @@
         data-1850="opacity: 0"
         data-2000="opacity: 1"></div>
 
+        <div class = 'scene' id = 'scene-viz2'
+        data-2300="opacity: 0"
+        data-2400="opacity: 1"></div>
+
         <div class = 'scene' id = 'scene-viz3'
         data-3400="opacity: 0"
         data-3600="opacity: 1"></div>
+
+        <div class = 'scene' id = 'scene-viz4'
+        data-4200="opacity: 0"
+        data-4500="opacity: 1"></div>
 
         <!-- <div class = 'scene' id = 'scene-im'
         data-2300="opacity:0"
@@ -50,12 +58,12 @@
         <!-- Marvel Logo -->
         <div id = "perspective">
             <figure id = 'logo' 
-            data-0 = "transform: rotatex(-90deg); opacity: 1"
-            data-500="transform: rotatex(0deg); opacity: 1"
+            data-0 = "transform: rotatex(-90deg); opacity: 1; top: 50px; left: 240px"
+            data-500="transform: rotatex(0deg); opacity: 1; top: 50px; left: 240px"
             data-650 = ""
             data-900="opacity: 0">
 
-                <img src = 'Images/Marvel Logo.jpg' id = 'marvlogo' height="250px" width="auto">
+                <img src = 'Images/Marvel Logo Trans.png' id = 'marvlogo' height="450px" width="auto">
 
             </figure>
         </div>
@@ -107,6 +115,7 @@
         data-4200="filter: brightness(1); top: 0px; left: 0px"
         data-4400="filter: brightness(.25); top: 0px; left: 0px"
         data-4600="filter: brightness(0); top: 0px; left: 0px"
+        data-4650="filter: brightness(0); top: 2000px; left: 0px"
         >
         <img src="Images/Theatre.jpg" alt="" height= "665px" width="1450px"></figure>
 
@@ -150,7 +159,26 @@
         </figure>
 
         <!-- TODO -->
-        <div id = 'viz4'></div>
+        <figure id = 'viz4'
+        data-4650="opacity: 0; top: 100px; left: 450px"
+        data-4800="opacity: 1; top: 100px; left: 80px"></figure>
+
+        <figure>
+            <img src="Images/Iron Man Circle.png" alt="IM Sticker" height="150px" width="auto"
+            data-4800="opacity: 0; top: 0px; left: 1000px; transform: rotate(0deg)" 
+            data-4900="opacity: 1; top: 50px; left: 1000px; transform: rotate(720deg)"
+            >
+        </figure>
+
+        <p class = 'quotes'
+            data-4900 = "left: 850px; top: 250px; opacity: 0"
+            data-5000 = "left: 850px; opacity: 1">"Sometimes you gotta run before you can walk."</p>
+        <p class = 'quotes'
+            data-4900 = "left: 850px; top: 350px; opacity: 0"
+            data-5000 = "left: 850px; opacity: 1">"Contrary to popular belief, I know exactly what I'm doing."</p>
+        <p class = 'quotes'
+            data-4900 = "left: 850px; top: 475px; opacity: 0"
+            data-5000 = "left: 850px; opacity: 1">"You can take away my house, all my tricks and toys. One thing you can’t take away… I am <b style="color: #e64727;">Iron Man.</b>"</p>
 
         <script type="text/javascript" src="skrollr-master/dist/skrollr.min.js"></script>
         <script type="text/javascript">

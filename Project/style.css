@@ -26,7 +26,7 @@ body{
 }
 
 #scene-intro {
-    background-color: #4a0505;
+    background-color: black;
 }
 
 #scene-timeline {
@@ -34,11 +34,19 @@ body{
 }
 
 #scene-viz1 {
-    background-color: #6f3c89;
+    background-color: black;
+}
+
+#scene-viz2 {
+    background-color: #807d75;
 }
 
 #scene-viz3 {
     background-color: white;
+}
+
+#scene-viz4 {
+    background-color: black;
 }
 
 /* #name-wrapper {
@@ -102,3 +110,8 @@ body{
     margin-top: -10px;
 }
 
+.quotes {
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+}
