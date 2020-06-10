@@ -1,4 +1,9 @@
 function setup() {
+    Highcharts.setOptions({
+        lang: {
+            thousandsSep: ','
+        }
+    });
     drawStackedBars();
     drawLine();
     drawScreenBars();
@@ -45,13 +50,16 @@ function drawStackedBars() {
             }
         },
 		series: [{
-			name: 'Reddit',
+            name: 'Reddit',
+            color: '#fbca03',
 			data: [59.8, 55.4, 51.1, 46.7, 45.7]
 		}, {
             name: 'Rotten Tomatoes',
+            color: '#b97d10',
             data: [53, 53, 50, 39, 30]
         }, {
             name: 'Express',
+            color: '#67C7EB',
             data: [25, 24, 22, 18, 14]
         }]
     });
@@ -198,7 +206,12 @@ function drawLine() {
 		yAxis: {
 			title: {
 				text: '<b>Sales generated</b>'
-			}
+            },
+            labels: {
+                formatter: function () {
+                    return '$' + this.value/1000000000 + 'B';
+                }
+            }
 		},
 		xAxis: {
 			title: {
@@ -222,13 +235,16 @@ function drawLine() {
 		},
 	
 		series: [{
-			name: 'Iron Man',
+            name: 'Iron Man',
+            color: '#fbca03',
 			data: [2721428147, 2611491474, 6879611017]
 		}, {
 			name: 'Captain America',
-			data: [1885669987, 2110501091, 5999444667]
+            color: '#b97d10',
+            data: [1885669987, 2110501091, 5999444667]
 		}, {
             name: 'Thor',
+            colors: '#67C7EB',
             data: [1964426829, 2040701718, 5700118607]
         }],
 	
@@ -268,12 +284,18 @@ function drawScreenBars() {
 			pointFormat: '{series.name}: <b>{point.y:.2f} hours</b>'
 		},
 		plotOptions: {
-            bar: {
+            column: {
                 dataLabels: {
                     enabled: true
-                }
-            }
+                },
+                colorByPoint: true
+            },
         },
+        colors: [
+            '#fbca03',
+            '#b97d10',
+            '#67C7EB'
+        ],
         xAxis: {
             categories: ['Iron Man', 'Captain America', 'Thor'],
             title: {
@@ -291,8 +313,11 @@ function drawScreenBars() {
         },
 		series: [{
             name: 'Hours',
-			data: [5.9625, 3.9291666666666667, 3.413611111111111]
-		}]
+            data: [5.96, 3.93, 3.41]
+        }],
+        legend: {
+            enabled: false
+        }
     });
 }
 
@@ -314,12 +339,18 @@ function drawLinesBars() {
 			pointFormat: '{series.name}: <b>{point.y:.2f} lines</b>'
 		},
 		plotOptions: {
-            bar: {
+            column: {
                 dataLabels: {
                     enabled: true
-                }
-            }
+                },
+                colorByPoint: true
+            },
         },
+        colors: [
+            '#fbca03',
+            '#b97d10',
+            '#67C7EB'
+        ],
         xAxis: {
             categories: ['Iron Man', 'Captain America', 'Thor'],
             title: {
@@ -338,6 +369,9 @@ function drawLinesBars() {
 		series: [{
             name: 'Lines',
             data: [1931, 927, 866]
-		}]
+        }],
+        legend: {
+            enabled: false
+        }
     });
 }
