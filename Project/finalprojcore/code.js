@@ -188,6 +188,7 @@ function drawLine() {
                 },
                 dataLabels: {
                     enabled: true,
+                    allowOverlap: false,
                     formatter: function() {
                         return '$' + (this.y/1000000000).toFixed(2) + 'B';
                     },
