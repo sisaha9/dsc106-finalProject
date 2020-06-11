@@ -9,8 +9,8 @@ function setup() {
     drawScreenBars();
     drawLinesBars();
     drawNetworkGraph();
-    // drawRadarChart();
     drawSpiderWeb();
+    drawMCUPopularity();
 }
 
 function drawStackedBars() {
@@ -577,5 +577,76 @@ function drawSpiderWeb() {
             }]
         }
     
+    });
+}
+
+function drawMCUPopularity() {
+    Highcharts.chart('viz9', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'column'
+		},
+		title: {
+			text: '<b>Highest Grossing Movie Franchises</b>'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films#Highest-grossing_franchises_and_film_series">Wikipedia</a>'
+        },
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.y:.2f} lines</b>'
+		},
+		plotOptions: {
+            column: {
+                dataLabels: {
+                    enabled: true,
+                    formatter: function() {
+                        console.log(this)
+                        return '$' + (this.y/1000000000).toFixed(2) + 'B';
+                    }
+                },
+                // colorByPoint: true
+            },
+        },
+        xAxis: {
+            categories: ['Marvel Cinematic Universe', 'Star Wars', 'Wizarding World', 'Avengers', 'Spider-Man', 'James Bond', 'Batman', 'X-Men'],
+            title: {
+                text: 'Franchises'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total Worldwide Gross'
+            },
+            labels: {
+                formatter: function () {
+                    return '$' + this.value/1000000000 + 'B';
+                }
+            }
+        },
+		series: [{
+            name: 'Marvel Based Movies',
+            data: [
+                [0, 22587809615], 
+                [3, 7770377000], 
+                [4, 7213542971]
+            ],  
+            color: '#fbca03'
+         }, {
+            name: 'Non Marvel Based Movies',
+            data: [
+                [1, 10315843646], 
+                [2, 9216451317],
+                [5, 7041394771], 
+                [6, 6070349025], 
+                [7, 6036347736]
+            ],
+            color: '#b97d10'
+        }],
+        legend: {
+            enabled: true
+        }
     });
 }
