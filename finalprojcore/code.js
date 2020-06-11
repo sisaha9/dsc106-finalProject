@@ -427,7 +427,7 @@ function drawNetworkGraph() {
         },
 
         title: {
-            text: "Tony Stark's major relationships",
+            text: "Tony Stark's Major Relationships",
             style: {
                 // fontFamily: 'monospace',
                 fontFamily: 'Ubuntu',
