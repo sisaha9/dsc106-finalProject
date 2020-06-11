@@ -14,7 +14,7 @@ function setup() {
 function drawStackedBars() {
     Highcharts.chart('viz1', {
 		chart: {
-			backgroundColor: 'black',
+            backgroundColor: 'black',
             style: {
                 // fontFamily: 'monospace',
                 color: "white"
@@ -24,24 +24,26 @@ function drawStackedBars() {
 			type: 'bar'
 		},
 		title: {
-			text: '<b>MCU Favorite Heroes In Different Sources</b>',
+            text: '<b>MCU Favorite Heroes</b>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white"
             },
         },
         subtitle: {
-            text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>, <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>, <a href="https://www.express.co.uk/entertainment/films/1117036/Avengers-Endgame-favourite-Marvel-superhero-poll-Iron-Man-Captain-America-Thor-Spider-Man">Express</a>'
+            text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>'
         },
 		tooltip: {
-			pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
+            pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'            
 		},
 		plotOptions: {
             bar: {
                 dataLabels: {
                     enabled: true,
                     color: "white"
+                                    
                 }
+                
             }
         },
         legend: {
@@ -72,7 +74,7 @@ function drawStackedBars() {
                 style: {
                     // fontFamily: 'monospace',
                     color: "white"
-                }
+                },
             },
             labels: {
                 overflow: 'justify',
@@ -83,18 +85,9 @@ function drawStackedBars() {
             }
         },
 		series: [{
-            name: 'Reddit',
-            color: '#fbca03',
-			data: [59.8, 55.4, 51.1, 46.7, 45.7]
-		}, {
-            name: 'Rotten Tomatoes',
-            color: '#b97d10',
-            data: [53, 53, 50, 39, 30]
-        }, {
-            name: 'Express',
-            color: '#67C7EB',
-            data: [25, 24, 22, 18, 14]
-        }]
+			name: 'Popularity',
+            data: [59.8, 55.4, 51.1, 46.7, 45.7],
+		}]
     });
 }
 
