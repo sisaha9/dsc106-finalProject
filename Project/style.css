@@ -91,7 +91,7 @@ body{
     padding-left: 450px;
 }
 
-#viz1, #viz2 {
+#viz0, #viz1, #viz2 {
     width: 75%;
 }
 
@@ -128,8 +128,13 @@ body{
     font-style: oblique;
 }
 
-.reasons {
+.reasons1, .reasons2, .reasons3, .reasons4 {
     color:#fbca03;
     font-size: 25px;
     font-style: oblique;
+}
+
+#Pop {
+    width: 100%;
+
 }

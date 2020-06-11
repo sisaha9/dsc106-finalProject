@@ -581,15 +581,19 @@ function drawSpiderWeb() {
 }
 
 function drawMCUPopularity() {
-    Highcharts.chart('viz9', {
+    Highcharts.chart('viz0', {
 		chart: {
-			plotBackgroundColor: null,
+			backgroundColor: 'black',
 			plotBorderWidth: null,
 			plotShadow: false,
 			type: 'column'
 		},
 		title: {
-			text: '<b>Highest Grossing Movie Franchises</b>'
+			text: '<b>Highest Grossing Movie Franchises</b>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "white"
+            }
         },
         subtitle: {
             text: 'Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films#Highest-grossing_franchises_and_film_series">Wikipedia</a>'
@@ -604,7 +608,8 @@ function drawMCUPopularity() {
                     formatter: function() {
                         console.log(this)
                         return '$' + (this.y/1000000000).toFixed(2) + 'B';
-                    }
+                    },
+                    color: 'white'
                 },
                 // colorByPoint: true
             },
@@ -612,15 +617,32 @@ function drawMCUPopularity() {
         xAxis: {
             categories: ['Marvel Cinematic Universe', 'Star Wars', 'Wizarding World', 'Avengers', 'Spider-Man', 'James Bond', 'Batman', 'X-Men'],
             title: {
-                text: 'Franchises'
+                text: 'Franchises',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
+            },
+            labels: {
+            style: {
+                // fontFamily: 'monospace',
+                color: "white"
             }
+        }
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Total Worldwide Gross'
+                text: 'Total Worldwide Gross',
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "white"
+                }
             },
-            labels: {
+            labels: {style: {
+                // fontFamily: 'monospace',
+                color: "white"
+            },
                 formatter: function () {
                     return '$' + this.value/1000000000 + 'B';
                 }
@@ -646,7 +668,10 @@ function drawMCUPopularity() {
             color: '#b97d10'
         }],
         legend: {
-            enabled: true
+            enabled: true,
+            itemStyle: {
+                color: 'white'
+            }
         }
     });
 }
