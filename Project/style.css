@@ -142,3 +142,7 @@ body{
 #Pop {
     width: 100%;
 }
+
+* {
+    font-family: 'Ubuntu';
+}
