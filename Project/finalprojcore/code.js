@@ -245,7 +245,7 @@ function drawScreenBars() {
 			type: 'column'
 		},
 		title: {
-            text: '<b>MCU Screen Time</b>',
+            text: '<b>MCU Screen Time Per Character</b>',
             style: {
                 fontSize: '30px'
             }
@@ -323,7 +323,7 @@ function drawLinesBars() {
 			type: 'column'
 		},
 		title: {
-			text: '<b>MCU Lines per character</b>',
+			text: '<b>MCU Lines Per Character</b>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white",
