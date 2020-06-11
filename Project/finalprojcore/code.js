@@ -26,7 +26,7 @@ function drawStackedBars() {
 			type: 'bar'
 		},
 		title: {
-            text: '<b>Percentage of fans choosing hero as top 5</b>',
+            text: '<b>Percentage of times an Avenger was chosen in Top 5 Avenger Lists</b>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white",
@@ -51,7 +51,8 @@ function drawStackedBars() {
                     color: "white",
                     style: {
                         fontSize: '15px'
-                    }   
+                    },
+                    format: '{y}%'
                 }
                 
             }
@@ -184,7 +185,16 @@ function drawLine() {
 			series: {
 				label: {
 					connectorAllowed: false
-				}
+                },
+                dataLabels: {
+                    enabled: true,
+                    formatter: function() {
+                        return '$' + (this.y/1000000000).toFixed(2) + 'B';
+                    },
+                    style: {
+                        color: 'white'
+                    }
+                }
 			}
 		},
 	
@@ -400,7 +410,6 @@ function drawNetworkGraph() {
         'Virgina "Pepper" Potts': "Pepper is Tony's personal assistant, later CEO of Stark Industries, and girlfriend. While not fond of Tony's constant philandering and insufferable eccentricity, she is unquestionably loyal to him. Out of all people, Tony is substantially nicer to Pepper and trusts her in return. They subtly showed a mutual feelings for each other, but initially tried to suppress them due to Pepper unwilling to be another of Tony's numerous dalliances. She always worries about Tony fighting alone against villains who stole his tech. When he was initially dying, Tony put Pepper as CEO of his company due to accountability. Tony and Pepper eventually entered a romantic relationship, with Tony ceasing his womanizer ways for her (briefly quitting being a superhero for her sake) while Pepper endures his faults. They temporarily broke up when Tony could not stop being a hero, but got back together with Tony soon proposing to Pepper with a ring he had Happy carry for a few years. They married and had a daughter named Morgan."
     };
     let ironMan = "#E8544E",
-    // others = "#FFD265";
     others = 'darkblue';
 
     Highcharts.chart('viz5', {

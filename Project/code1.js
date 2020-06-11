@@ -61,7 +61,7 @@ Highcharts.chart('timeline', {
             label: 'Iron Man',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2008, 6, 13),
@@ -74,7 +74,7 @@ Highcharts.chart('timeline', {
             label: 'Iron Man 2',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2011, 5, 6),
@@ -92,7 +92,7 @@ Highcharts.chart('timeline', {
             label: 'The Avengers',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2013, 5, 3),
@@ -100,7 +100,7 @@ Highcharts.chart('timeline', {
             label: 'Iron Man 3',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2013, 11, 8),
@@ -123,7 +123,7 @@ Highcharts.chart('timeline', {
             label: 'Avengers: Age of Ultron',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2015, 7, 17),
@@ -136,7 +136,7 @@ Highcharts.chart('timeline', {
             label: 'Captain America: Civil War',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2016, 11, 4),
@@ -154,7 +154,7 @@ Highcharts.chart('timeline', {
             label: 'Spider-Man: Homecoming',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2017, 11, 3),
@@ -172,7 +172,7 @@ Highcharts.chart('timeline', {
             label: 'Avengers: Infinity War',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2018, 7, 6),
@@ -190,7 +190,7 @@ Highcharts.chart('timeline', {
             label: 'Avengers: Endgame',
             description: "",
             dataLabels: {
-                backgroundColor: '#f0e79d'
+                backgroundColor: 'orange'
             }
         }, {
             x: Date.UTC(2019, 7, 2),
