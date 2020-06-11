@@ -9,7 +9,7 @@ function setup() {
     drawScreenBars();
     drawLinesBars();
     drawNetworkGraph();
-    drawRadarChart();
+    // drawRadarChart();
     drawSpiderWeb();
 }
 
@@ -264,7 +264,7 @@ function drawLinesBars() {
 			text: '<b>MCU Lines per character</b>',
             style: {
                 // fontFamily: 'monospace',
-                color: "green"
+                color: "#c22c11"
             }
         },
         subtitle: {
@@ -293,13 +293,13 @@ function drawLinesBars() {
                 text: 'Heroes',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "green"
-                },
-                labels: {
-                    style: {
-                        // fontFamily: 'monospace',
-                        color: "green"
-                    }
+                    color: "#c22c11"
+                }
+            },
+            labels: {
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "#c22c11"
                 }
             }
         },
@@ -309,14 +309,14 @@ function drawLinesBars() {
                 text: 'Number of lines',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "green"
+                    color: "#c22c11"
                 }
             },
             labels: {
                 overflow: 'justify',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "green"
+                    color: "#c22c11"
                 }
             }
         },
@@ -481,14 +481,19 @@ function drawNetworkGraph() {
 }
 
 function drawSpiderWeb() {
-    Highcharts.chart('viz8', {
+    Highcharts.chart('viz6', {
         chart: {
             polar: true,
-            type: 'line'
+            type: 'line',
+            backgroundColor: 'black',
         },
 
         title: {
             text: 'Iron Man vs other popular heroes',
+            style: {
+                // fontFamily: 'monospace',
+                color: "#248203"
+            },
             x: -80
         },
         subtitle: {
@@ -501,14 +506,26 @@ function drawSpiderWeb() {
         xAxis: {
             categories: ['Intelligence', 'Strength', 'Speed', 'Durability', 'Power', 'Combat'],
             tickmarkPlacement: 'on',
-            lineWidth: 0
+            lineWidth: 0,
+            labels: {
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "#248203"
+                }
+            }
         },
     
         yAxis: {
             gridLineInterpolation: 'polygon',
             lineWidth: 0,
             min: 0,
-            max: 100
+            max: 100,
+            labels: {
+                style: {
+                    // fontFamily: 'monospace',
+                    color: "#248203"
+                }
+            }
         },
     
         tooltip: {
@@ -519,7 +536,10 @@ function drawSpiderWeb() {
         legend: {
             align: 'right',
             verticalAlign: 'middle',
-            layout: 'vertical'
+            layout: 'vertical',
+            itemStyle:{
+                color: "#248203"                
+            }
         },
     
         series: [{

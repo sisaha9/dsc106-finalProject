@@ -9,6 +9,7 @@
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/timeline.js"></script>
         <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
         <script src="finalprojcore/code.js"></script>
         <title>
             DSC 106 - Trial
@@ -87,18 +88,13 @@
             data-1900="transform: rotate(1800deg) scale(0)">
         </figure>
 
+        <!-- Fav Heroes -->
         <figure id = 'viz1'
         data-2000="opacity: 0; transform:rotate(90deg)" data-2100="opacity: 1; transform:rotate(0deg)"
         data-2200 = "left: 75px; transform:rotate(0deg)" 
-        data-2400 = "left: -1000px; transform:rotate(-90deg)"></figure>
-
-
-        <!-- <figure id = 'scene-im'
-        data-2300="opacity: 0; top: 0px; left: 0px"
-        data-2400="opacity: 1; top: 0px; left: 0px"
-        data-2500="opacity: 1; top: 0px; left: 2000px">
-        <img src="Images/Iron Man Wallpaper.jpg" alt="" height= "655px" width="1450px"></figure>  -->
-
+        data-2400 = "left: -1000px; transform:rotate(-90deg);opacity: 0"></figure>
+        
+        <!-- Sales Viz -->
         <figure id = 'viz2'
         data-2300= "opacity: 0; top: 640px"
         data-2400= "opacity: 1; top: 640px; transform: rotate(0deg)" 
@@ -107,7 +103,7 @@
         data-2700= "top: 200px; transform: rotate(0deg)"
         data-2800= "top: 100px;"
         data-3200 = "left: 75px; transform: rotate(0deg)"
-        data-3400 = "left: 1100px; top: -700px; transform: rotate(-90deg)"></figure>
+        data-3400 = "left: 1100px; top: -700px; transform: rotate(-90deg);opacity: 0"></figure>
         
         <!-- Theatre Background -->
         <figure id = 'scene-im'
@@ -155,31 +151,75 @@
             data-3700="opacity: 0; top: 190px; left: 0px" 
             data-3900="opacity: 1; top: 190px; left: 985px"
             data-4200="opacity: 1; top: 190px; left: 985px"
-            data-4400="opacity: 1; top: 190px; left: 1500px"
+            data-4400="opacity: 0; top: 190px; left: 1500px"
             >
         </figure>
 
-        <!-- TODO -->
+        <!-- Lines Distr. -->
         <figure id = 'viz4'
         data-4650="opacity: 0; top: 100px; left: 450px"
-        data-4800="opacity: 1; top: 100px; left: 80px"></figure>
+        data-4800="opacity: 1; top: 100px; left: 80px"
+        data-5100="opacity: 1; top: 100px; left: 80px"
+        data-5300="opacity: 0; top: 100px; left: -500px"></figure>
 
         <figure>
             <img src="Images/Iron Man Circle.png" alt="IM Sticker" height="150px" width="auto"
             data-4800="opacity: 0; top: 0px; left: 1000px; transform: rotate(0deg)" 
             data-4900="opacity: 1; top: 50px; left: 1000px; transform: rotate(720deg)"
+            data-5100="opacity: 1; top: 50px; left: 1000px; transform: rotate(720deg)"
+            data-5300="opacity: 0; top: 50px; left: -50px; transform: rotate(00deg)"
             >
         </figure>
 
+        <!-- Quotes -->
         <p class = 'quotes'
             data-4900 = "left: 850px; top: 250px; opacity: 0"
-            data-5000 = "left: 850px; opacity: 1">"Sometimes you gotta run before you can walk."</p>
+            data-5000 = "left: 850px; opacity: 1"
+            data-5100 = "left: 850px; opacity: 1"
+            data-5300 = "top: -200px; left: 850px; opacity: 0">"Sometimes you gotta run before you can walk."</p>
         <p class = 'quotes'
             data-4900 = "left: 850px; top: 350px; opacity: 0"
-            data-5000 = "left: 850px; opacity: 1">"Contrary to popular belief, I know exactly what I'm doing."</p>
+            data-5000 = "left: 850px; opacity: 1"
+            data-5100 = "left: 850px; opacity: 1"
+            data-5300 = "top: -200px; left: 850px; opacity: 0">"Contrary to popular belief, I know exactly what I'm doing."</p>
         <p class = 'quotes'
             data-4900 = "left: 850px; top: 475px; opacity: 0"
-            data-5000 = "left: 850px; opacity: 1">"You can take away my house, all my tricks and toys. One thing you can’t take away… I am <b style="color: #e64727;">Iron Man.</b>"</p>
+            data-5000 = "left: 850px; opacity: 1"
+            data-5100 = "left: 850px; opacity: 1"
+            data-5300 = "top: -200px; left: 850px; opacity: 0">"You can take away my house, all my tricks and toys. One thing you can’t take away… I am <b style="color: #e64727;">Iron Man.</b>"</p>
+        
+        <!-- Spider Chart -->
+        <figure id = 'viz6'
+        data-5300="opacity: 0; top: 100px; left: 700px; transform: scale(0)"
+        data-5500="opacity: 1; top: 100px; left: 700px; transform: scale(1)"></figure>
+
+        <figure>
+            <img src="Images/Thor OP.gif" alt="Thor GIF" height="250px" width="auto"
+            data-5600="opacity: 0; top: 0px; left: 100px;" 
+            data-5700="opacity: 1; top: 200px; left: 100px;"
+            data-5800="opacity: 1; top: 200px; left: 100px;"
+            data-5850="opacity: 0; top: 200px; left: 100px;"
+            >
+        </figure>
+
+        <p class = 'spidertext'
+            data-5650 = "left: 850px; top: 400px; opacity: 0"
+            data-5700 = "left: 120px; opacity: 1"
+            data-5800= "opacity: 1;"
+            data-5850= "opacity: 0;"
+            >Thor is arguably the strongest Avenger!</p>
+        
+        <figure>
+            <img src="Images/TS Explosion.gif" alt="TS GIF" height="250px" width="auto"
+            data-5800="opacity: 0; top: 0px; left: 100px;" 
+            data-5900="opacity: 1; top: 200px; left: 100px;"
+            >
+        </figure>
+    
+        <p class = 'spidertext'
+            data-5850 = "left: 850px; top: 1000px; opacity: 0"
+            data-5900 = "left: 120px; top: 430px; opacity: 1"
+            >Then why does Tony Stark get all the hype?</p>
         
 
         <figure id = 'viz5'></figure>

@@ -115,3 +115,9 @@ body{
     font-size: 25px;
     font-style: italic;
 }
+
+.spidertext {
+    color: #248203;
+    font-size: 25px;
+    font-style: oblique;
+}
