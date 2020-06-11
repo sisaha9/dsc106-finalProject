@@ -26,46 +26,54 @@ function drawStackedBars() {
 			type: 'bar'
 		},
 		title: {
-            text: '<b>MCU Favorite Heroes</b>',
+            text: '<b>Percentage of fans choosing hero as top 5</b>',
             style: {
                 // fontFamily: 'monospace',
-                color: "white"
+                color: "white",
+                fontSize: '30px'
             },
         },
         subtitle: {
-            text: 'Source: <a href="https://www.reddit.com/r/marvelstudios/comments/a1wird/results_top_5_favorite_mcu_heroes/">Reddit</a>'
+            text: 'Source: <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>',
+            style: {
+                // fontFamily: 'monospace',
+                color: "white",
+                fontSize: '15px'
+            },
         },
 		tooltip: {
-            pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'            
+            pointFormat: '{series.name}: <b>{point.y}%</b>'            
 		},
 		plotOptions: {
             bar: {
                 dataLabels: {
                     enabled: true,
-                    color: "white"
-                                    
+                    color: "white",
+                    style: {
+                        fontSize: '15px'
+                    }   
                 }
                 
             }
         },
         legend: {
-            itemStyle: {
-            color: "white"
-            }
+            enabled: false
         },
         xAxis: {
-            categories: ['Iron Man', 'Thor', 'Spider Man', 'Doctor Strange', 'Captain America'],
+            categories: ['Iron Man', 'Captain America', 'Thor', 'Spider Man', 'Doctor Strange'],
             title: {
                 text: 'Heroes',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '20px'
                 }
             },
             labels: {
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '15px'
                 }
             }
         },
@@ -75,20 +83,22 @@ function drawStackedBars() {
                 text: 'Popularity (%)',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '20px'
                 },
             },
             labels: {
                 overflow: 'justify',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '15px'
                 }
             }
         },
 		series: [{
 			name: 'Popularity',
-            data: [59.8, 55.4, 51.1, 46.7, 45.7],
+            data: [53, 53, 50, 39, 30]
 		}]
     });
 }
@@ -102,22 +112,28 @@ function drawLine() {
 			text: '<b>Sales by Phase</b>',
             style: {
                 // fontFamily: 'monospace',
-                color: "white"
+                color: "white",
+                fontSize: '30px'
             }
 		},
         subtitle: {
             text: 'Source: <a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">The Numbers</a>',
             style: {
                 // fontFamily: 'monospace',
-                color: "#4d4b46"
+                color: "white",
+                fontSize: '15px'
             }
         },
+        tooltip: {
+            pointFormat: '{series.name}: <b>${point.y}</b>'            
+		},
 		yAxis: {
 			title: {
 				text: '<b>Sales generated</b>',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '20px'
                 }
             },
             labels: {
@@ -126,7 +142,8 @@ function drawLine() {
                 },
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '15px'
                 }
             }
         },
@@ -139,13 +156,15 @@ function drawLine() {
 				text: '<b>Phase</b>',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '20px'
                 }
 			},
 			categories: ['Phase 1', 'Phase 2', 'Phase 3'],
             labels: {style: {
                 // fontFamily: 'monospace',
-                color: "white"
+                color: "white",
+                fontSize: '15px'
             }
 
         }
@@ -154,7 +173,11 @@ function drawLine() {
 		legend: {
 			layout: 'vertical',
 			align: 'right',
-			verticalAlign: 'middle'
+            verticalAlign: 'middle',
+            itemStyle: {
+                color: 'white',
+                fontSize: '13px'
+            }
 		},
 	
 		plotOptions: {
@@ -206,10 +229,16 @@ function drawScreenBars() {
 			type: 'column'
 		},
 		title: {
-			text: '<b>MCU Screen Time</b>'
+            text: '<b>MCU Screen Time</b>',
+            style: {
+                fontSize: '30px'
+            }
         },
         subtitle: {
-            text: 'Source: <a href="https://www.imdb.com/list/ls066620113/">IMDb</a>'
+            text: 'Source: <a href="https://www.imdb.com/list/ls066620113/">IMDb</a>',
+            style: {
+                fontSize: '15px'
+            }
         },
 		tooltip: {
 			pointFormat: '{series.name}: <b>{point.y:.2f} hours</b>'
@@ -217,7 +246,10 @@ function drawScreenBars() {
 		plotOptions: {
             column: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
+                    style: {
+                        fontSize: '16px'
+                    }
                 },
                 colorByPoint: true
             },
@@ -230,16 +262,30 @@ function drawScreenBars() {
         xAxis: {
             categories: ['Iron Man', 'Captain America', 'Thor'],
             title: {
-                text: 'Heroes'
+                text: 'Heroes',
+                style: {
+                    fontSize: '20px'
+                }
+            },
+            labels: {
+                style: {
+                    fontSize: '15px'
+                }
             }
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Screen Time (in hrs)'
+                text: 'Screen Time (in hrs)',
+                style: {
+                    fontSize: '20px'
+                }               
             },
             labels: {
-                overflow: 'justify'
+                overflow: 'justify',
+                style: {
+                    fontSize: '15px'
+                }
             }
         },
 		series: [{
@@ -264,11 +310,16 @@ function drawLinesBars() {
 			text: '<b>MCU Lines per character</b>',
             style: {
                 // fontFamily: 'monospace',
-                color: "#c22c11"
+                color: "white",
+                fontSize: '30px'
             }
         },
         subtitle: {
-            text: 'Source: <a href="https://transcripts.fandom.com/wiki/Category:Marvel_Transcripts">Fandom</a>'
+            text: 'Source: <a href="https://transcripts.fandom.com/wiki/Category:Marvel_Transcripts">Fandom</a>',
+            style: {
+                color: 'white',
+                fontSize: '15px'
+            }
         },
 		tooltip: {
 			pointFormat: '{series.name}: <b>{point.y:.2f} lines</b>'
@@ -277,7 +328,10 @@ function drawLinesBars() {
             column: {
                 dataLabels: {
                     enabled: true,
-                    color: 'white'
+                    color: 'white',
+                    style: {
+                        fontSize: '15px'
+                    }
                 },
                 colorByPoint: true
             },
@@ -293,13 +347,15 @@ function drawLinesBars() {
                 text: 'Heroes',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "#c22c11"
+                    color: "white",
+                    fontSize: '20px'
                 }
             },
             labels: {
                 style: {
                     // fontFamily: 'monospace',
-                    color: "#c22c11"
+                    color: "white",
+                    fontSize: '15px'
                 }
             }
         },
@@ -309,14 +365,16 @@ function drawLinesBars() {
                 text: 'Number of lines',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "#c22c11"
+                    color: "white",
+                    fontSize: '20px'
                 }
             },
             labels: {
                 overflow: 'justify',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "#c22c11"
+                    color: "white",
+                    fontSize: '15px'
                 }
             }
         },
@@ -342,7 +400,8 @@ function drawNetworkGraph() {
         'Virgina "Pepper" Potts': "Pepper is Tony's personal assistant, later CEO of Stark Industries, and girlfriend. While not fond of Tony's constant philandering and insufferable eccentricity, she is unquestionably loyal to him. Out of all people, Tony is substantially nicer to Pepper and trusts her in return. They subtly showed a mutual feelings for each other, but initially tried to suppress them due to Pepper unwilling to be another of Tony's numerous dalliances. She always worries about Tony fighting alone against villains who stole his tech. When he was initially dying, Tony put Pepper as CEO of his company due to accountability. Tony and Pepper eventually entered a romantic relationship, with Tony ceasing his womanizer ways for her (briefly quitting being a superhero for her sake) while Pepper endures his faults. They temporarily broke up when Tony could not stop being a hero, but got back together with Tony soon proposing to Pepper with a ring he had Happy carry for a few years. They married and had a daughter named Morgan."
     };
     let ironMan = "#E8544E",
-    others = "#FFD265";
+    // others = "#FFD265";
+    others = 'darkblue';
 
     Highcharts.chart('viz5', {
 
@@ -353,14 +412,20 @@ function drawNetworkGraph() {
         },
 
         title: {
-            text: 'Tony Stark and other characters in the MCU',
+            text: "Tony Stark's major relationships",
             style: {
                 // fontFamily: 'monospace',
-                color: "#197ce6"
+                fontFamily: 'Ubuntu',
+                color: "white",
+                fontSize: '30px'
             }
         },
         subtitle: {
-            text: 'Source: <a href="https://disney.fandom.com/wiki/Iron_Man/Relationships">Fandom</a>'
+            text: 'Source: <a href="https://disney.fandom.com/wiki/Iron_Man/Relationships">Fandom</a>',
+            style: {
+                color: "white",
+                fontSize: "15px"
+            }
         },
         tooltip:{
             formatter:function(){
@@ -417,7 +482,8 @@ function drawNetworkGraph() {
                 allowOverlap: true,
                 style: {
                     textOutline: false,
-                    color: '#197ce6'
+                    color: 'white',
+                    fontSize: '13px'
                 }
             },
             data: [
@@ -502,12 +568,17 @@ function drawSpiderWeb() {
             text: 'Iron Man vs other popular heroes',
             style: {
                 // fontFamily: 'monospace',
-                color: "#248203"
+                color: "white",
+                fontSize: '29px'
             },
             x: -80
         },
         subtitle: {
-            text: 'Sources: <a href="https://www.superherodb.com/>SHDb</a>'
+            text: 'Sources: <a href="https://www.superherodb.com/>SHDb</a>',
+            style: {
+                color: 'white',
+                fontSize: '14px'
+            }
         },
         pane: {
             size: '80%'
@@ -520,7 +591,8 @@ function drawSpiderWeb() {
             labels: {
                 style: {
                     // fontFamily: 'monospace',
-                    color: "#248203"
+                    color: "white",
+                    fontSize: '14px'
                 }
             }
         },
@@ -533,7 +605,8 @@ function drawSpiderWeb() {
             labels: {
                 style: {
                     // fontFamily: 'monospace',
-                    color: "#248203"
+                    color: "white",
+                    fontSize: '14px'
                 }
             }
         },
@@ -602,24 +675,31 @@ function drawMCUPopularity() {
 			text: '<b>Highest Grossing Movie Franchises</b>',
             style: {
                 // fontFamily: 'monospace',
-                color: "white"
+                color: "white",
+                fontSize: '30px'
             }
         },
         subtitle: {
-            text: 'Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films#Highest-grossing_franchises_and_film_series">Wikipedia</a>'
+            text: 'Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films#Highest-grossing_franchises_and_film_series">Wikipedia</a>',
+            style: {
+                color: "white",
+                fontSize: '15px'
+            }
         },
 		tooltip: {
-			pointFormat: '{series.name}: <b>{point.y:.2f} lines</b>'
+            pointFormat: '{series.name}: <b>${point.y}</b>',
 		},
 		plotOptions: {
             column: {
                 dataLabels: {
                     enabled: true,
                     formatter: function() {
-                        console.log(this)
                         return '$' + (this.y/1000000000).toFixed(2) + 'B';
                     },
-                    color: 'white'
+                    color: 'white',
+                    style: {
+                        fontSize: '15px'
+                    }
                 },
                 // colorByPoint: true
             },
@@ -630,13 +710,15 @@ function drawMCUPopularity() {
                 text: 'Franchises',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '20px'
                 }
             },
             labels: {
             style: {
                 // fontFamily: 'monospace',
-                color: "white"
+                color: "white",
+                fontSize: '15px'
             }
         }
         },
@@ -646,13 +728,16 @@ function drawMCUPopularity() {
                 text: 'Total Worldwide Gross',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "white"
+                    color: "white",
+                    fontSize: '20px'
                 }
             },
-            labels: {style: {
+            labels: {
+                style: {
                 // fontFamily: 'monospace',
-                color: "white"
-            },
+                    color: "white",
+                    fontSize: '20px'
+                },
                 formatter: function () {
                     return '$' + this.value/1000000000 + 'B';
                 }
