@@ -26,7 +26,7 @@ function drawStackedBars() {
 			type: 'bar'
 		},
 		title: {
-            text: '<b>Percentage of times an Avenger was chosen in Top 5 Avenger Lists</b>',
+            text: '<b>MCU Avenger Popularity</b>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white",
@@ -34,7 +34,7 @@ function drawStackedBars() {
             },
         },
         subtitle: {
-            text: 'Source: <a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/">Rotten Tomatoes</a>',
+            text: '<br>Percentage of times an Avenger was chosen as favorite<br><br><a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/" style="color:grey;">Source: Rotten Tomatoes</a>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white",
@@ -110,7 +110,7 @@ function drawLine() {
 			backgroundColor: 'black'
 		},
 		title: {
-			text: '<b>Sales by Phase</b>',
+			text: '<b>Sales by Phase per Avenger</b>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white",
@@ -118,10 +118,10 @@ function drawLine() {
             }
 		},
         subtitle: {
-            text: 'Source: <a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">The Numbers</a>',
+            text: '<a href="https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe#tab=summary">Source: The Numbers</a>',
             style: {
                 // fontFamily: 'monospace',
-                color: "white",
+                color: "grey",
                 fontSize: '15px'
             }
         },
@@ -188,7 +188,8 @@ function drawLine() {
                 },
                 dataLabels: {
                     enabled: true,
-                    allowOverlap: false,
+                    padding: 0,
+                    allowOverlap: true,
                     formatter: function() {
                         return '$' + (this.y/1000000000).toFixed(2) + 'B';
                     },
@@ -210,7 +211,11 @@ function drawLine() {
 		}, {
             name: 'Thor',
             colors: '#0fbcfc', /*'#67C7EB',*/
-            data: [1964426829, 2040701718, 5700118607]
+            data: [1964426829, 2040701718, 5700118607],
+            verticalAlign: 'bottom',
+            dataLabels: {
+                y: 15
+            }
         }],
 	
 		responsive: {
@@ -328,7 +333,7 @@ function drawLinesBars() {
         subtitle: {
             text: 'Source: <a href="https://transcripts.fandom.com/wiki/Category:Marvel_Transcripts">Fandom</a>',
             style: {
-                color: 'white',
+                color: 'grey',
                 fontSize: '15px'
             }
         },
@@ -433,7 +438,7 @@ function drawNetworkGraph() {
         subtitle: {
             text: 'Source: <a href="https://disney.fandom.com/wiki/Iron_Man/Relationships">Fandom</a>',
             style: {
-                color: "white",
+                color: "grey",
                 fontSize: "15px"
             }
         },
@@ -586,7 +591,7 @@ function drawSpiderWeb() {
         subtitle: {
             text: 'Sources: <a href="https://www.superherodb.com/>SHDb</a>',
             style: {
-                color: 'white',
+                color: 'grey',
                 fontSize: '14px'
             }
         },
@@ -692,7 +697,7 @@ function drawMCUPopularity() {
         subtitle: {
             text: 'Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films#Highest-grossing_franchises_and_film_series">Wikipedia</a>',
             style: {
-                color: "white",
+                color: "grey",
                 fontSize: '15px'
             }
         },
