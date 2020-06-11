@@ -160,3 +160,11 @@ h3 {
     color: #edb934;
     text-align: center;
 }
+
+#screen-caption {
+    color: black;
+}
+
+#video-source {
+    color: white;
+}
