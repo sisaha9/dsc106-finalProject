@@ -34,7 +34,7 @@ function drawStackedBars() {
             },
         },
         subtitle: {
-            text: '<br>Percentage of times an Avenger was chosen as favorite<br><br><a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/" style="color:grey;">Source: Rotten Tomatoes</a>',
+            text: '<br>Percentage of times an Avenger was chosen as a favorite Avenger<br><br><a href="https://editorial.rottentomatoes.com/article/iron-man-captain-america-voted-favorite-avengers/" style="color:grey;">Source: Rotten Tomatoes</a>',
             style: {
                 // fontFamily: 'monospace',
                 color: "white",
