@@ -34,31 +34,6 @@ body{
     background-color: black;
 }
 
-#scene-timeline {
-    background-color: black;
-}
-
-#scene-viz1 {
-    background-color: black;
-}
-
-#scene-viz2 {
-    background-color: #807d75;
-}
-
-#scene-viz3 {
-    background-color: white;
-}
-
-#scene-viz4 {
-    background-color: black;
-}
-
-/* #name-wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
-    text-align: center;
-} */
 
 #SK {
     padding-top: 250px;
@@ -91,11 +66,6 @@ body{
     padding-left: 400px;
 }
 
-#arc {
-    padding-top: 40px;
-    padding-left: 450px;
-}
-
 #viz0, #viz1, #viz2 {
     width: 75%;
 }
@@ -105,10 +75,10 @@ body{
     width: 65%;
 }
 
-/* #im-sticker {
-    padding-left: 1000px;
-    padding-top: 25px;  
-} */
+
+#text1 {
+    text-align: center;
+}
 
 #scene-im {
     margin-left: 0px;
@@ -117,7 +87,7 @@ body{
 
 .quotes {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-style: italic;
 }
 
@@ -135,14 +105,53 @@ body{
 
 .reasons1, .reasons2, .reasons3, .reasons4 {
     color:#fbca03;
-    font-size: 25px;
+    font-size: 20px;
     font-style: oblique;
 }
 
-#Pop {
+#Pop, #Spider, #Lines, #Theatre, #Concl, #vid {
     width: 100%;
+}
+
+h1 {
+    color: coral;
+}
+
+#conclusion{
+    color: #68208c;
+    font-size: 45px;
+    text-decoration: underline overline;
+}
+
+h2 {
+    color: #4284f5;
+    font-size: 30px;
 }
 
 * {
     font-family: 'Ubuntu';
+}
+
+em {
+    font-style: italic;
+    color: #943a71;
+}
+
+.responsive-container {
+	position: relative;
+	padding-bottom: 53.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.responsive-container,
+	.responsive-container iframe {
+	max-width: 1280px;
+	max-height: 720px;
+}
+.responsive-container iframe {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
 }

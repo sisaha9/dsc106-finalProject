@@ -96,13 +96,13 @@ function drawStackedBars() {
 function drawLine() {
     Highcharts.chart('viz2', {
         chart: {
-			backgroundColor: '#807d75'
+			backgroundColor: 'black'
 		},
 		title: {
 			text: '<b>Sales by Phase</b>',
             style: {
                 // fontFamily: 'monospace',
-                color: "black"
+                color: "white"
             }
 		},
         subtitle: {
@@ -117,7 +117,7 @@ function drawLine() {
 				text: '<b>Sales generated</b>',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "black"
+                    color: "white"
                 }
             },
             labels: {
@@ -126,7 +126,7 @@ function drawLine() {
                 },
                 style: {
                     // fontFamily: 'monospace',
-                    color: "black"
+                    color: "white"
                 }
             }
         },
@@ -139,13 +139,13 @@ function drawLine() {
 				text: '<b>Phase</b>',
                 style: {
                     // fontFamily: 'monospace',
-                    color: "black"
+                    color: "white"
                 }
 			},
 			categories: ['Phase 1', 'Phase 2', 'Phase 3'],
             labels: {style: {
                 // fontFamily: 'monospace',
-                color: "black"
+                color: "white"
             }
 
         }
@@ -348,11 +348,16 @@ function drawNetworkGraph() {
 
         chart: {
             type: 'networkgraph',
-            marginTop: 80
+            marginTop: 80,
+            backgroundColor: 'black'
         },
 
         title: {
-            text: 'South Korea domestic flight routes'
+            text: 'Tony Stark and other characters in the MCU',
+            style: {
+                // fontFamily: 'monospace',
+                color: "#197ce6"
+            }
         },
         subtitle: {
             text: 'Source: <a href="https://disney.fandom.com/wiki/Iron_Man/Relationships">Fandom</a>'
@@ -384,14 +389,18 @@ function drawNetworkGraph() {
                 events: {
                     click: function(e) {
                         let text_container = document.getElementById('text1');
+                        let place_holder = document.getElementById('placeh');
                         if (e.point.id === 'Tony Stark') {
                             text_container.innerHTML = ''
+                            place_holder.innerHTML = '<i>Relationship description is displayed here</i>'
                             return;
                         }
                         if (text_container.innerHTML === r[e.point.id]) {
                             text_container.innerHTML = ''
+                            place_holder.innerHTML = '<i>Relationship description is displayed here</i>'
                         } else {
                             text_container.innerHTML = r[e.point.id]
+                            place_holder.innerHTML = ''
                         }
                     }
                 }
@@ -407,7 +416,8 @@ function drawNetworkGraph() {
                 linkFormat: '',
                 allowOverlap: true,
                 style: {
-                    textOutline: false 
+                    textOutline: false,
+                    color: '#197ce6'
                 }
             },
             data: [
