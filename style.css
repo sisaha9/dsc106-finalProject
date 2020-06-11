@@ -18,6 +18,14 @@
     position:static;
 }  
 
+#fp-title{
+    font-family: "Stark";
+    font-size: 75px;
+    /* color: red; */
+    opacity: 1;
+    padding-left: 450px;
+    padding-top: -50px;
+}
 
 body{
     /* background: #4a0505; */
