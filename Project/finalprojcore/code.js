@@ -9,6 +9,8 @@ function setup() {
     drawScreenBars();
     drawLinesBars();
     drawNetworkGraph();
+    drawRadarChart();
+    drawSpiderWeb();
 }
 
 function drawStackedBars() {
@@ -475,5 +477,85 @@ function drawNetworkGraph() {
                 color: others
             }]
         }]
+    });
+}
+
+function drawSpiderWeb() {
+    Highcharts.chart('viz8', {
+        chart: {
+            polar: true,
+            type: 'line'
+        },
+
+        title: {
+            text: 'Iron Man vs other popular heroes',
+            x: -80
+        },
+        subtitle: {
+            text: 'Sources: <a href="https://www.superherodb.com/>SHDb</a>'
+        },
+        pane: {
+            size: '80%'
+        },
+    
+        xAxis: {
+            categories: ['Intelligence', 'Strength', 'Speed', 'Durability', 'Power', 'Combat'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0
+        },
+    
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            lineWidth: 0,
+            min: 0,
+            max: 100
+        },
+    
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+        },
+    
+        legend: {
+            align: 'right',
+            verticalAlign: 'middle',
+            layout: 'vertical'
+        },
+    
+        series: [{
+            name: 'Iron Man',
+            color: '#fbca03',
+            data: [100, 80, 55, 80, 90, 70],
+            pointPlacement: 'on'
+        }, {
+            name: 'Captain America',
+            color: '#b97d10',
+            data: [80, 60, 40, 50, 65, 95],
+            pointPlacement: 'on'
+        }, {
+            name: 'Thor',
+            colors: '#67C7EB',
+            data: [85, 100, 65, 100, 100, 100],
+            pointPlacement: 'on'
+        }],
+    
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                        layout: 'horizontal'
+                    },
+                    pane: {
+                        size: '70%'
+                    }
+                }
+            }]
+        }
+    
     });
 }
