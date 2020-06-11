@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Stark";
+    src: url("Stark.ttf");
+}
+
 .skrollable {
     position:fixed;
     z-index:100;
@@ -136,5 +141,4 @@ body{
 
 #Pop {
     width: 100%;
-
 }
